@@ -398,10 +398,10 @@ Unban terlebih dahulu untuk menggunakan
             message.from_user.first_name
             hmo = await message.reply_text(
                 """
-<b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar
+<b>❌ Lagu tidak ditemukan, masukin judul yang bener goblok
 
-✅ Contoh Menggunakan Bot
-`/play halu`
+✅ Contoh Play musik
+`/play Asadekontol
 """,
             )
             return
@@ -469,11 +469,11 @@ Unban terlebih dahulu untuk menggunakan
         await message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Trek ditambahkan ke antrian</b>
+<b>💡 Lagu ditambahkan ke antrian</b>
 
 <b>🏷️ Nama: [{title[:25]}]({link})</b>
 <b>⏱️ Durasi:</b> {duration} \n
-<b>🎧 Atas permintaan: </b>{checking}
+<b>🎧 Lagu diputar oleh: </b>{checking}
 
 <b>#️⃣ Posisi antrian</b> {position}
 """,
@@ -660,12 +660,12 @@ async def startyuplay(_, CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Trek ditambahkan ke antrian</b>
+<b>💡 Lagu ditambahkan ke antrian</b>
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
 <b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
-<b>🎧 Atas permintaan:</b> {checking}
+<b>🎧 Lagu diputar oleh:</b> {checking}
 
 <b>#️⃣ Posisi antrian</b> {position}
 """,
