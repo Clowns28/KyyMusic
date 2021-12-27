@@ -199,7 +199,7 @@ Saya perlu menjadi admin dengan beberapa izin:
                 f"""
 {ASSNAME}(@{ASSUSERNAME}) dibanned di obrolan Anda **{chat_title}**
 
-Unban terlebih dahulu untuk menggunakan
+Unban terlebih dahulu untuk menggunakan music
 """
             )
             return
@@ -258,7 +258,7 @@ Unban terlebih dahulu untuk menggunakan
         if duration > DURATION_LIMIT:
             return await mystic.edit_text(
                 f"""
-**Kesalahan Durasi**
+**Max durasi cuma 2jam bngsat**
 
 **Durasi yang Diizinkan: **{DURATION_LIMIT}
 **Durasi yang Diterima:** {duration}
@@ -307,7 +307,7 @@ Unban terlebih dahulu untuk menggunakan
         if smex > DURATION_LIMIT:
             return await mystic.edit_text(
                 f"""
-**Kesalahan Durasi**
+**Max durasi cuma 2jam bngsat**
 
 **Durasi yang Diizinkan:** {DURATION_LIMIT}
 **Durasi yang Diterima:** {duration}
@@ -398,9 +398,9 @@ Unban terlebih dahulu untuk menggunakan
             message.from_user.first_name
             hmo = await message.reply_text(
                 """
-<b>❌ Lagu tidak ditemukan, masukin judul yang bener goblok
+<b>❌ Lagu tidak ditemukan, masukin judul lagu yang bener goblok
 
-✅ Contoh Play musik
+✅ Contoh Play music
 `/play Asadekontol
 """,
             )
@@ -512,7 +512,7 @@ Unban terlebih dahulu untuk menggunakan
             caption=f"""
 <b>🏷 Nama:</b> [{title[:25]}]({link})
 <b>⏱️ Durasi:</b> {duration}
-<b>🎧 Atas permintaan:</b> {checking}
+<b>🎧 Lagu diputar oleh:</b> {checking}
 """,
         )
         return await mystic.delete()
@@ -547,7 +547,7 @@ async def startyuplay(_, CallbackQuery):
     if smex > DURATION_LIMIT:
         await CallbackQuery.message.reply_text(
             f"""
-**Kesalahan Durasi**
+**Max durasi cuma 2jam bngsat**
 
 **Durasi yang Diizinkan: {DURATION_LIMIT}**
 **Durasi yang Diteriman:** {duration}
